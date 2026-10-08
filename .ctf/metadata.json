@@ -1,0 +1,14 @@
+{
+  "title": "Google CTF 2024: PyCalc",
+  "description": "A Python calculator in a sandbox that checks the bytecode of each expression and caches what it validated.",
+  "question": "Retrieve the flag from the challenge service.",
+  "category": "MISC",
+  "difficulty": 3,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "python-sandbox-escape",
+    "bytecode",
+    "hash-collision",
+    "python"
+  ]
+}
