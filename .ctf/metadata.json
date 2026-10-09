@@ -4,11 +4,5 @@
   "question": "Retrieve the flag from the challenge service.",
   "category": "MISC",
   "difficulty": 3,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "python-sandbox-escape",
-    "bytecode",
-    "hash-collision",
-    "python"
-  ]
+  "evidence_kind": "SECRET"
 }
