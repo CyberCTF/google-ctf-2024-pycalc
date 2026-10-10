@@ -1,0 +1,68 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Run the flag program",
+      "prompt": "Escape the calculator's bytecode check and run /readflag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2024-pycalc}",
+      "hints": [
+        "The calculator caches validation results by the hash of the expression.",
+        "Can two different expressions share a hash?"
+      ],
+      "steps": [
+        {
+          "key": "hash",
+          "title": "Identify the hash",
+          "prompt": "Which hash function keys the validation cache?",
+          "check": {
+            "answer": [
+              "md5"
+            ]
+          }
+        },
+        {
+          "key": "checked",
+          "title": "Know what is checked",
+          "prompt": "What does the calculator validate before running an expression?",
+          "check": {
+            "answer": [
+              "bytecode",
+              "byte code",
+              "python bytecode",
+              "opcodes"
+            ]
+          }
+        },
+        {
+          "key": "attack",
+          "title": "Name the attack",
+          "prompt": "What attack makes two different inputs share one hash?",
+          "check": {
+            "answer": [
+              "collision",
+              "hash collision",
+              "md5 collision",
+              "chosen-prefix collision",
+              "identical-prefix collision"
+            ]
+          }
+        },
+        {
+          "key": "target",
+          "title": "Find the target",
+          "prompt": "Which program prints the flag? (path)",
+          "check": {
+            "answer": [
+              "/readflag",
+              "readflag"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
