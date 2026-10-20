@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2024-pycalc",
+  "slug": "google-ctf-2024-pycalc",
   "title": "Google CTF 2024: PyCalc",
   "description": "A Python calculator in a sandbox that checks the bytecode of each expression and caches what it validated.",
-  "question": "Bypass the calculator's validation cache, run code and get /readflag's output.",
-  "category": "MISC",
+  "category": "misc",
   "difficulty": 3,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Bypass the calculator's validation cache, run code and get /readflag's output."
 }
