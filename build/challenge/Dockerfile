@@ -24,7 +24,6 @@ COPY --from=chroot / /chroot
 COPY app/challenge/nsjail.cfg /home/user/
 
 CMD kctf_setup && \
-    kctf_drop_privs \
     socat \
       TCP-LISTEN:1337,reuseaddr,fork \
       EXEC:"kctf_pow nsjail -q --config /home/user/nsjail.cfg -- /usr/bin/python3 /home/user/main.py",pty
